@@ -1,0 +1,416 @@
+/**리스트**/
+.list .section {
+  max-width: 2560px;
+  width: calc(100% - 20px);
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 28px auto 0;
+}
+
+.list .section .container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 30px 0;   
+  width: 100%;
+}
+
+.buy .section {
+  max-width: 2560px;
+  width: 100%;
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.buy .section .container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.section .container h3 {
+  font-size: 36px;
+  line-height: 1.4;
+  letter-spacing: -.5px;
+  font-weight: 700;
+  word-break: keep-all;
+}
+
+.section .container .products { 
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;    
+  padding: 0;
+}
+
+.section .container .products li {
+  width: calc(25% - 15px);
+  list-style: none;
+}
+
+.section .container .products li .product {
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  transition: transform .2s ease 0s;
+  overflow: hidden;
+  display: block;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0,0,0,.08), 4px 12px 36px rgba(0,0,0,.09);
+  border-radius: 16px;
+}
+
+.section .container .products li .product:hover {
+  transform: translateY(-10px);
+}
+
+.section .container .products li .product > span {
+  overflow: hidden;    
+  width: 100%;
+  display: inline-block;
+}
+
+.section .container .products li .product span img {
+  width:100%;
+}
+
+.section .container .products li .product > div {
+  position: relative;
+  min-height: 140px;
+  padding: 20px 20px 24px;    
+  display: flex;
+  flex-direction: column;    
+  justify-content: space-between;
+}
+
+.section .container .products li .product > div .upper {
+  justify-content: space-between;
+  display: flex;    
+  align-items: center;
+}
+
+.section .container .products li .product > div .upper span:nth-of-type(2) { 
+  display: block;
+  font-size: 13px;
+  color: #08f;
+}
+
+.section .container .products li .product > div .cont {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700;
+  word-break: keep-all;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  min-height: 44px;    
+  margin: 0;
+}
+
+.section .container .products li .product > div p {
+  font-size: 13px;
+  padding-top: 20px;
+}
+
+.section .container .products li .product > div em {
+  position: absolute;
+  right: 20px;
+  bottom: 24px;
+  display: block;
+  font-size: 13px;
+  color: #08f;
+}
+
+.section .container .products li .product > div em:after {
+  content: "";
+  display: inline-block;
+  vertical-align: -2px;
+  width: 12px;
+  height: 12px;  
+  margin-left: 2px;
+}
+
+
+
+/**구매뷰**/
+/****구매 및 포멧****/
+.buy {
+
+}
+
+.buy > .section {
+  
+}
+
+.buy > .section > .container {
+  display: flex;
+}
+
+.buy > .section > .container .content {
+  flex: 1;
+  max-width: calc(100% - 395px);
+  min-height: calc(100vh - 200px);
+}
+
+.buy > .section > .container .content .viewer {
+  position: relative;
+  z-index: 1;
+  /* padding-top: 56%; */
+  width: 100%;
+  transition: padding-top .4s cubic-bezier(.165,.84,.44,1) .2s;
+}
+
+.buy > .section > .container .content .content_desc {
+  margin:20px 0;
+}
+
+.buy > .section > .container .content .viewer .viewer_container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.buy > .section > .container .viewer_container iframe{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+}
+
+/****상단 제품 설명 및 상세정보****/
+.buy > .section > .container .aside {
+  flex-shrink: 0;
+  margin-left: 30px;
+  width: 365px;
+  display: flex;
+  flex-direction: column;   
+}
+
+.buy > .section > .container .aside .sidewrap { 
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  position: fixed;
+}
+
+.buy > .section > .container .aside .item_side_info {
+
+}
+
+.buy > .section > .container .aside .item_side_info .item_addedinfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buy > .section > .container .aside .item_side_info  .item_price {
+  margin: 20px 0;
+}
+
+.buy > .section > .container .aside .item_side_info .item_price .og_price {
+  font-weight: 700;
+  font-size:22px;    
+  display: inline-block;    
+  text-decoration: line-through;    
+  color: #cccccc;
+}
+
+.buy > .section > .container .aside .item_side_info .item_price .dc_price {
+  font-weight: 700;
+  font-size:35px;    
+  color: #fbb000;
+}
+
+.buy > .section > .container .aside .item_side_info .item_buy {
+  
+}
+
+.buy > .section > .container .aside .item_side_info .item_buy .add_item {
+  color: rgb(255, 255, 255);
+  background-color: rgb(46, 142, 238);
+}
+
+.buy > .section > .container .aside .item_side_info .item_buy .add_item:hover {
+  transition: all 0.2s ease 0s;
+}
+
+.buy > .section > .container .aside .item_side_info .item_buy .buy_item {
+  
+}
+
+.item_side_detail {
+  margin-top: 20px;
+}
+
+.item_side_detail strong {
+  font-weight:bold;
+}
+
+.item_side_detail .item_hashtag {
+  margin:20px 0;
+}
+
+.item_side_detail .item_hashtag strong {
+  
+}
+
+.item_side_detail .item_hashtag .category {
+  display: flex;    
+  padding: 10px 0;
+}
+
+.item_side_detail .item_hashtag .category li {
+
+}
+
+.item_side_detail .item_hashtag .category li + li {
+  margin-left: 10px
+}
+
+.item_side_detail .item_hashtag .category li a {
+  background: #eee;
+  border-radius: 55px;
+  padding: 4px 15px;
+  font-size: 12px;
+}
+
+.item_side_detail .item_format {
+  
+}
+
+.item_side_detail .item_format ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.item_side_detail .item_format ul li {
+  justify-content: space-between;
+  display: flex;    
+  margin: 5px 0;
+}
+
+
+/****하단 제품 설명 및 상세정보****/
+.buy > .section > .container .content .content_desc .detail {
+
+}
+
+.buy > .section > .container .content .content_desc .detail .tab_box .item_content h3 {
+  text-align:left;
+}
+
+.buy > .section > .container .content .content_desc .detail .tab_box .item_content .law_responsable {
+  margin: 20px 0;
+  padding:20px;
+  background-color: #eee;
+}
+
+.buy > .section > .container .content .content_desc .detail .tab_box .item_content .additional_content {
+  margin: 20px 0;
+}
+
+.buy > .section > .container .content .content_desc .detail .tab_box .item_content .additional_content strong {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.buy > .section > .container .content .content_desc .detail .tab_box .item_content .additional_content > ul {
+  display: flex;    
+}
+
+.buy > .section > .container .content .content_desc .detail .tab_box .item_content .additional_content > ul li {
+  width: calc(33.3% - 13px);
+}
+
+.buy > .section > .container .content .content_desc .detail .tab_box .item_content .additional_content > ul li + li {
+  margin-left:20px;
+}
+
+.buy > .section > .container .content .content_desc .detail .tab_box .item_content .additional_content > ul > li .thumb_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.additional_content > ul > li .thumb_wrap .thumb_info{
+  padding:15px;
+}
+
+.additional_content > ul > li .thumb_wrap .thumb_info .thumb_name {
+  padding-bottom: 5px;
+}
+
+.additional_content > ul > li .thumb_wrap .thumb_info > div:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.additional_content > ul > li .thumb_wrap .thumb_info > div:nth-of-type(2) .thumb_date {
+  color: #00aaff;
+}
+
+/*썸네일*/
+.thumb_preview {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  overflow: hidden
+}
+
+.thumb_preview img {
+  width:100%;
+}
+
+.thumb_preview__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  background-color: var(--color-neutral-900,#222);
+  display: none
+}
+
+.thumb_preview__background.--loaded {
+  display: block;
+  opacity: 0;
+  transition: opacity .2s ease;
+  will-change: opacity
+}
+
+.thumb_preview__background.--loaded.--visible {
+  opacity: 1
+}
+
+.thumb_preview__image {
+  position: absolute;
+  width: 100%;
+  height: 100%
+}
+
+.thumb_preview__loading {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: #1caad9;
+  background-color: var(--color-primary-400,#1caad9);
+  transition: width .35s ease-out,height .2s ease-out .35s
+}
