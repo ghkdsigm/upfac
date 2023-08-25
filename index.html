@@ -368,6 +368,7 @@
 
     function popupOpen() {
         $('.layerpop').css("position", "absolute");
+        $('body').css("overflow", "hidden");
         //영역 가운에데 레이어를 뛰우기 위해 위치 계산 
         //리사이즈시 작동 펑션
         window.addEventListener('resize', function(){
@@ -389,6 +390,7 @@
     function popupClose() {
         $('#layerbox').hide();
         $('#mask').hide();
+        $('body').css("overflow", "unset");
     }
 
     function goDetail() {
