@@ -16,6 +16,7 @@
 
   <link rel="stylesheet" href="">
   <link type="text/css" rel="stylesheet" href="css/reset.css">
+  <link type="text/css" rel="stylesheet" href="css/layout.css">
   <link type="text/css" rel="stylesheet" href="css/publishing_guide.css">
   <link type="text/css" rel="stylesheet" href="css/common.css">
   <link type="text/css" rel="stylesheet" href="css/res.css">
@@ -33,7 +34,63 @@
   <div id="wrap"><!-- wrap -->
 
     <!-- header -->
-    <div id="header">    
+    <div class="header">    
+      <h1 class="logo"><a href="index.html"><span class="blind">logo</span></a></h1>
+      <div class="naviWrap ">
+        <nav class="navi" id="navi">
+          <ul>
+            <li class="">
+              <a href="#">회사소개</a>
+              <ul class="depth2">
+                <li><a href="#">인사말 및 비전</a></li>
+                <li><a href="#">사업분야</a></li>
+                <li><a href="#">사업실적</a></li>
+                <li><a href="#">채용정보</a></li>
+                <li><a href="#">오시는 길</a></li>
+              </ul>
+            </li>
+            <li class="">
+              <a href="#">솔루션</a>
+              <ul class="depth2">
+                <li><a href="#">[<span class="txt-blue">LIMS</span>]</a></li>
+                <li><a href="#">[<span class="txt-blue">SDMS,LAS</span>]</a></li>
+                <li><a href="#">[<span class="txt-blue">ELN,LES</span>]</a></li>
+                <li><a href="#">LEMS</a></li>
+              </ul>
+            </li>
+            <li class="">
+              <a href="#">지식센터</a>
+              <ul class="depth2">
+                <li><a href="#">구축사례</a></li>
+                <li><a href="#">정기간행물</a></li>
+                <li><a href="#">관련기사</a></li>
+                <li><a href="#">자료실</a></li>
+                <li><a href="#">비디오</a></li>
+              </ul>
+            </li>
+            <li class="">
+              <a href="#">고객지원</a>
+              <ul class="depth2">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">업데이트</a></li>
+                <li><a href="#">문의하기</a></li>
+              </ul>
+            </li>
+          </ul>
+          <button type="button" class="naviCloseBtn sm-pc" style="display: none;"><i class="bx bx-x"></i><span
+              class="blind">메뉴닫기</span></button>
+        </nav>
+        <button type="button" class="totalMenu close">
+          <span class="bars">
+            <i class="bar1"></i>
+            <i class="bar2"></i>
+            <i class="bar3"></i>
+          </span>
+          <span class="blind">전체메뉴</span>
+        </button>
+      </div>
+      <button type="button" class="mobileMenuBtn sm-pc" style="display: none;"><i class="bx bx-menu"></i><span
+          class="blind">메뉴</span></button>
     </div>
     <!-- //header -->
 
@@ -47,6 +104,290 @@
               리스트
             </h3>
             <ul class="products">
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <!-- 360 preview -->
+                    <div class="threesixty-wrapper">
+                      <div class="threesixty" data-path="images/threesixty/gem{index}.jpg" data-count="61">
+                          <!-- put your preloader here -->
+                          <div class="ui-spinner">
+                              <span class="side side-left">
+                                  <span class="fill"></span>
+                              </span>
+                              <span class="side side-right">
+                                  <span class="fill"></span>
+                              </span>
+                          </div>
+                          <!-- end preloader -->
+                      </div> 
+                    </div>
+                    <!-- //360 preview -->
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <!-- 360 preview -->
+                    <div class="threesixty-wrapper">
+                      <div class="threesixty" data-path="images/threesixty/gem{index}.jpg" data-count="61">
+                          <!-- put your preloader here -->
+                          <div class="ui-spinner">
+                              <span class="side side-left">
+                                  <span class="fill"></span>
+                              </span>
+                              <span class="side side-right">
+                                  <span class="fill"></span>
+                              </span>
+                          </div>
+                          <!-- end preloader -->
+                      </div> 
+                    </div>
+                    <!-- //360 preview -->
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <!-- 360 preview -->
+                    <div class="threesixty-wrapper">
+                      <div class="threesixty" data-path="images/threesixty/gem{index}.jpg" data-count="61">
+                          <!-- put your preloader here -->
+                          <div class="ui-spinner">
+                              <span class="side side-left">
+                                  <span class="fill"></span>
+                              </span>
+                              <span class="side side-right">
+                                  <span class="fill"></span>
+                              </span>
+                          </div>
+                          <!-- end preloader -->
+                      </div> 
+                    </div>
+                    <!-- //360 preview -->
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <!-- 360 preview -->
+                    <div class="threesixty-wrapper">
+                      <div class="threesixty" data-path="images/threesixty/gem{index}.jpg" data-count="61">
+                          <!-- put your preloader here -->
+                          <div class="ui-spinner">
+                              <span class="side side-left">
+                                  <span class="fill"></span>
+                              </span>
+                              <span class="side side-right">
+                                  <span class="fill"></span>
+                              </span>
+                          </div>
+                          <!-- end preloader -->
+                      </div> 
+                    </div>
+                    <!-- //360 preview -->
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
               <li>                
                 <div class="product" onClick="javascript:goDetail();">
                   <span>
@@ -438,6 +779,130 @@
       $threeSixty.on('up', function(){
           $('.ui, h1, h2, .label, .examples').stop().animate({opacity:1}, 500);
       });
+
+
+      //헤더
+      // scroll Dwon 이벤트
+      $(".visual .scrollDown").on("click",function(){
+      	let solutionTop = $(".solution").offset().top;
+        console.log(solutionTop)
+      	$("body,html").animate({scrollTop : solutionTop});
+
+       
+      })
+      
+      // �ㅽ겕濡� �대깽��
+      $(window).scroll(function (e) {
+        /*let solutionTop = $(".solution").length > 0 ? $(".solution").offset().top : 300;*/
+        let scrollFixTop = 100;
+        let headerHeight = $(".header").height();
+
+        // header 怨좎젙/怨좎젙�댁젣
+        if ($(this).scrollTop() >= headerHeight) {
+          $(".header").addClass("fixed");
+        } else {
+          $(".header").removeClass("fixed");
+        }
+
+
+        // �곷떒�대룞 踰꾪듉 蹂댁씠湲�/�④린湲�
+        if ($(this).scrollTop() >= scrollFixTop) {
+          $(".topBtn").addClass("active");
+        } else {
+          $(".topBtn").removeClass("active");
+        }
+      }) // $(window).scroll �대깽�� ��
+
+
+      // �곷떒�대룞 踰꾪듉
+      $(".topBtn").on("click", function (e) {
+        e.preventDefault();
+        $("html,body").animate({ scrollTop: 0 });
+      })
+
+      //  navi 愿��� 湲곕뒫
+      $(".navi").on("mouseenter", function (e) {
+        if (checkViewport() == "lg-pc") {
+          $('.header').addClass("naviOn");
+        }
+      })
+      $(".navi").on("mouseleave", function (e) {
+        if (checkViewport() == "lg-pc") {
+          $('.header').removeClass("naviOn");
+          $('.navi>ul>li.active').removeClass("active");
+        }
+      })
+      $(".navi>ul>li").on("mouseenter", function (e) {
+        if (checkViewport() == "lg-pc") {
+          $(".navi>ul>li.active").removeClass("active");
+          $(this).addClass("active")
+        }
+      })
+      $(".navi>ul>li>a").on("click", function (e) {
+        if (checkViewport() == "sm-pc") {
+          e.preventDefault();
+          $(this).toggleClass("on");
+          $(this).parent().find(".depth2").slideToggle();
+        }
+      })
+
+      /* 紐⑤컮�� 硫붾돱愿��� */
+      $(".mobileMenuBtn").on("click", function (e) {
+        e.preventDefault();
+        $('.navi').addClass('slideOpen');
+        modal();
+      })
+      $(".naviCloseBtn").on("click", function (e) {
+        e.preventDefault();
+        $('.navi').removeClass('slideOpen');
+        modal();
+      })
+
+
+      // modal 湲곕뒫
+      function modal() {
+        $("body").toggleClass("modal")
+      }
+
+      // viewport  泥댄겕
+      function checkViewport() {
+        if (matchMedia("screen and (min-width: 1200px)").matches) {
+          console.log('lg-pc');
+          return 'lg-pc';
+        } else {
+          console.log('sm-pc');
+          return 'sm-pc';
+        }
+      }
+
+      // 由ъ궗�댁쫰 �대깽��
+      $(window).resize(function (e) {
+        reset();
+        if ($(".scrollWrap").length > 0) scrollCheck();
+      })
+
+      // 珥덇린��
+      function reset() {
+        $("body.modal").removeClass();
+        if (checkViewport() == "lg-pc") {
+          $(".sm-pc").hide();
+        } else {
+          $(".sm-pc").show();
+        }
+      }
+
+      function scrollCheck() {
+        let sw_wid = $(".scrollWrap").width();
+        let sg_wid = $(".scrollWrap .scrollGroup")[0].scrollWidth;
+        console.log("scrollCheck()")
+        console.log(sw_wid)
+        console.log(sg_wid)
+        if (sw_wid < sg_wid) {
+          $(".scrollWrap").addClass("scroll")
+        } else {
+          $(".scrollWrap").removeClass("scroll")
+        }
+      }
     });
   </script>
 
