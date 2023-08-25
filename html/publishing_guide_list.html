@@ -17,11 +17,12 @@
   <link rel="stylesheet" href="">
   <link type="text/css" rel="stylesheet" href="../css/reset.css">
   <link type="text/css" rel="stylesheet" href="../css/publishing_guide.css">
-  <link type="text/css" rel="stylesheet" href="../css/res.css">
   <link type="text/css" rel="stylesheet" href="../css/common.css">
+  <link type="text/css" rel="stylesheet" href="../css/res.css">
 
   <!-- jquery //-->
-  <script type="text/javascript" src="../js/jquery/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="../js/jquery/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.threesixty.js"></script>
 
   <style type="text/css">
 
@@ -51,10 +52,55 @@
                   <span>
                     <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
                   </span>
-                  <div>
-                    <h4>title</h4>
-                    <p>content</p>
-                    <em>more</em>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
+                  </div>
+                </div>
+              </li>
+              <li>                
+                <div class="product" onClick="javascript:goDetail();">
+                  <span>
+                    <!-- 360 preview -->
+                    <div class="threesixty-wrapper">
+                      <div class="threesixty" data-path="../images/threesixty/gem{index}.jpg" data-count="61">
+                          <!-- put your preloader here -->
+                          <div class="ui-spinner">
+                              <span class="side side-left">
+                                  <span class="fill"></span>
+                              </span>
+                              <span class="side side-right">
+                                  <span class="fill"></span>
+                              </span>
+                          </div>
+                          <!-- end preloader -->
+                      </div> 
+                    </div>
+                    <!-- //360 preview -->
+                  </span>
+                  <div>                    
+                    <div class="upper">
+                      <span>category</span>
+                      <span>more</span>
+                    </div>
+                    <p class="cont">content</p>
                   </div>
                 </div>
               </li>
@@ -135,7 +181,22 @@
                                 <li>
                                   <div class="thumb_wrap">
                                     <div class="thumb_preview">
-                                      <img src="https://media.sketchfab.com/models/67e1ee2e49c543b2a3a52ccc8988810a/thumbnails/b9166ec6dc3b4747b8314d47a7456c40/58c01fdfef7e4d0b8730f7e7014418ba.jpeg" alt="">
+                                      <!-- 360 preview -->
+                                      <div class="threesixty-wrapper">
+                                        <div class="threesixty" data-path="../images/threesixty/gem{index}.jpg" data-count="61">
+                                            <!-- put your preloader here -->
+                                            <div class="ui-spinner">
+                                                <span class="side side-left">
+                                                    <span class="fill"></span>
+                                                </span>
+                                                <span class="side side-right">
+                                                    <span class="fill"></span>
+                                                </span>
+                                            </div>
+                                            <!-- end preloader -->
+                                        </div> 
+                                      </div>
+                                      <!-- //360 preview -->  
                                     </div>
                                     <div class="thumb_info">
                                       <div class="thumb_name">그레이하운드 캐릭터 3D 이미지</div>
@@ -308,9 +369,16 @@
     function popupOpen() {
         $('.layerpop').css("position", "absolute");
         //영역 가운에데 레이어를 뛰우기 위해 위치 계산 
+        //리사이즈시 작동 펑션
         window.addEventListener('resize', function(){
           $('.layerpop').css("top",(($(window).height() - $('.layerpop').outerHeight()) / 2) + $(window).scrollTop());
-        $('.layerpop').css("left",(($(window).width() - $('.layerpop').outerWidth()) / 2) + $(window).scrollLeft());
+          $('.layerpop').css("left",(($(window).width() - $('.layerpop').outerWidth()) / 2) + $(window).scrollLeft());
+          // if (window.innerWidth <= 576) {
+          //   $('.layerpop').css("top", 0);
+          //   $('.layerpop').css("left", 0);
+          //   $('.layerpop').css("width", '100%');
+          //   $('.layerpop').css("height", '100vh');
+          // }
         });
         $('.layerpop').css("top",(($(window).height() - $('.layerpop').outerHeight()) / 2) + $(window).scrollTop());
         $('.layerpop').css("left",(($(window).width() - $('.layerpop').outerWidth()) / 2) + $(window).scrollLeft());
@@ -335,6 +403,7 @@
 
   <script type="text/javascript">
     $(document).ready(function(){
+      //tabtype03
       $('.tab_type03 a').click(function(){
         var idx = $(this).parent().index();
         console.log(idx);
@@ -342,6 +411,31 @@
         $(this).parent().addClass('on');
         $('.tab_box').addClass('hide').eq(idx).removeClass('hide');
       })
+
+      //thumb preview
+      var $threeSixty = $('.threesixty');
+
+      $threeSixty.threeSixty({
+          dragDirection: 'horizontal',
+          useKeys: true,
+          draggable: true
+      });
+
+      $('.next').click(function(){
+          $threeSixty.nextFrame();
+      });
+
+      $('.prev').click(function(){
+          $threeSixty.prevFrame();
+      });
+
+      $threeSixty.on('down', function(){
+          $('.ui, h1, h2, .label, .examples').stop().animate({opacity:0}, 300);
+      });
+
+      $threeSixty.on('up', function(){
+          $('.ui, h1, h2, .label, .examples').stop().animate({opacity:1}, 500);
+      });
     });
   </script>
 
