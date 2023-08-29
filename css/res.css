@@ -1,6 +1,6 @@
 @media (max-width: 1200px) {
     .title { font-size: 16px; }
-    .list .section .container ul li {
+    .listTyplistTypee01 .section .container ul li {
         width: calc(33.3% - 27px);
     }
 }
@@ -19,17 +19,17 @@
  
 @media (max-width: 767px) {
     .title { font-size: 14px; }  
-    .list .section .container ul li {
+    .listType .section .container ul li {
         width: calc(50% - 15px);
     }   
 }
 
-@media (min-width: 480px) and (max-width: 639px) {
+/* @media (min-width: 480px) and (max-width: 639px) {
     .title { font-size: 12px; }
-    .list .section .container ul li {
+    .listType01 .section .container ul li {
         width: calc(100%);
     }
-}
+} */
 
 @media (max-width: 576px) {
   .layerpop {
@@ -42,11 +42,27 @@
   .layerpop_area .layerpop_close {
 
   }
+  .buy > .section > .container .content .content_desc .detail .tab_box .item_content .additional_content > ul {
+    flex-wrap: wrap;
+  }
+  .buy > .section > .container .content .content_desc .detail .tab_box .item_content .additional_content > ul li {
+    width: calc(50% - 10px);
+  }
+  .buy > .section > .container .content .content_desc .detail .tab_box .item_content .additional_content > ul li:nth-of-type(3n){
+    margin-left:0;
+  }
 }
+@media (max-width: 576px) { 
+  .listType .section .container ul li {
+    width: 100%;
+  }
+
+}
+
 
 /* @media (max-width: 480px) {
     .title { font-size: 14px; }  
-    .list .section .container ul li {
+    .listType01 .section .container ul li {
       width: calc(100% - 15px);
     }
 } */
